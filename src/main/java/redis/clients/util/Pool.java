@@ -24,7 +24,7 @@ public abstract class Pool<T> {
     	
     	if (this.internalPool != null) {
     		try {
-    			destroy();
+    			closeInternalPool();
     		} catch (Exception e) {    			
     		}
     	}
@@ -68,7 +68,7 @@ public abstract class Pool<T> {
         }
     }
 
-    public void destroy() {
+    public void closeInternalPool() {
         try {
             internalPool.close();
         } catch (Exception e) {

@@ -2,9 +2,9 @@ apply plugin: 'java'
 apply plugin: 'maven'
 apply plugin: 'eclipse'
 
-group = 'com.googlecode.jedis'
+group = 'redis.client'
 archiveBaseName = 'jedis'
-version = '1.5.0'
+version = '2.2.1.PROCON'
 
 repositories {
    mavenCentral()

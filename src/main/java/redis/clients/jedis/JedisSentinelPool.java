@@ -107,7 +107,7 @@ public class JedisSentinelPool extends Pool<Jedis> {
 	    m.shutdown();
 	}
 
-	super.destroy();
+	super.closeInternalPool();
     }
 
     public HostAndPort getCurrentHostMaster() {
