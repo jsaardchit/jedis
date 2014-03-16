@@ -67,7 +67,9 @@ public abstract class Pool<T> {
                     "Could not return the resource to the pool", e);
         }
     }
-
+    public void destroy() {
+        closeInternalPool();
+    }
     public void closeInternalPool() {
         try {
             internalPool.close();

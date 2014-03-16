@@ -103,11 +103,11 @@ public class JedisSentinelPool extends Pool<Jedis> {
     private volatile HostAndPort currentHostMaster;
 
     public void destroy() {
-	for (MasterListener m : masterListeners) {
-	    m.shutdown();
-	}
+		for (MasterListener m : masterListeners) {
+		    m.shutdown();
+		}
 
-	super.closeInternalPool();
+		super.destroy();
     }
 
     public HostAndPort getCurrentHostMaster() {
